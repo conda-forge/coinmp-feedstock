@@ -12,20 +12,20 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
 
 requirements:
   build:
     - toolchain
     - pkgconfig
-    - readline
-    - zlib
-    - bzip2
+    - readline 6.2*
+    - zlib 1.2.*
+    - bzip2 1.0.*
   run:
-    - readline
-    - zlib
-    - bzip2
+    - readline 6.2*
+    - zlib 1.2.*
+    - bzip2 1.0.*
 
 test:
   commands:
