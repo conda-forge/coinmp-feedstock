@@ -1,6 +1,5 @@
 {% set name = "CoinMP" %}
 {% set version = "1.8.3" %}
-{% set sha256 = "7ae0c37c15d09f91c7fda33729d930e612ded8120d96c3e0932d82b7127cc5d0" %}
 
 package:
   name: {{ name|lower }}
@@ -19,6 +18,7 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - {{ compiler('fortran') }}
   host:
     - pkgconfig
     - readline 6.2*
