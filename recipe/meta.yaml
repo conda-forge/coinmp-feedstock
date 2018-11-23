@@ -1,31 +1,32 @@
 {% set name = "CoinMP" %}
 {% set version = "1.8.3" %}
-{% set sha256 = "7ae0c37c15d09f91c7fda33729d930e612ded8120d96c3e0932d82b7127cc5d0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.zip
   url: http://www.coin-or.org/download/source/CoinMP/{{ name }}-{{ version }}.zip
-  sha256: {{ sha256 }}
+  sha256: 7ae0c37c15d09f91c7fda33729d930e612ded8120d96c3e0932d82b7127cc5d0
 
 build:
-  number: 1
+  number: 1001
   skip: True  # [win]
 
 requirements:
   build:
-    - toolchain
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - {{ compiler('fortran') }}
+  host:
     - pkgconfig
-    - readline 6.2*
-    - zlib 1.2.*
-    - bzip2 1.0.*
+    - readline
+    - zlib
+    - bzip2
   run:
-    - readline 6.2*
-    - zlib 1.2.*
-    - bzip2 1.0.*
+    - readline
+    - zlib
+    - bzip2
 
 test:
   commands:
