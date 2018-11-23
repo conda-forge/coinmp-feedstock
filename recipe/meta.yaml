@@ -6,7 +6,6 @@ package:
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.zip
   url: http://www.coin-or.org/download/source/CoinMP/{{ name }}-{{ version }}.zip
   sha256: 7ae0c37c15d09f91c7fda33729d930e612ded8120d96c3e0932d82b7127cc5d0
 
@@ -21,13 +20,13 @@ requirements:
     - {{ compiler('fortran') }}
   host:
     - pkgconfig
-    - readline 6.2*
-    - zlib 1.2.*
-    - bzip2 1.0.*
+    - readline
+    - zlib
+    - bzip2
   run:
-    - readline 6.2*
-    - zlib 1.2.*
-    - bzip2 1.0.*
+    - readline
+    - zlib
+    - bzip2
 
 test:
   commands:
