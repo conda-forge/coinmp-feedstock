@@ -1,5 +1,7 @@
 build_number_decrement:
 - '0'
+bzip2:
+- '1'
 c_compiler:
 - gcc
 channel_sources:
@@ -12,6 +14,15 @@ docker_image:
 - condaforge/linux-anvil-comp7
 fortran_compiler:
 - gfortran
+pin_run_as_build:
+  bzip2:
+    max_pin: x
+  readline:
+    max_pin: x
+  zlib:
+    max_pin: x.x
+readline:
+- '7.0'
 zip_keys:
 - - c_compiler
   - cxx_compiler
@@ -20,3 +31,5 @@ zip_keys:
   - channel_targets
   - docker_image
   - build_number_decrement
+zlib:
+- '1.2'
