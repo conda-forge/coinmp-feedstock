@@ -1,5 +1,5 @@
 {% set name = "CoinMP" %}
-{% set version = "1.8.3" %}
+{% set version = "1.8.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: http://www.coin-or.org/download/source/CoinMP/{{ name }}-{{ version }}.zip
-  sha256: 7ae0c37c15d09f91c7fda33729d930e612ded8120d96c3e0932d82b7127cc5d0
+  sha256: a87c451bf7d4d77aa81c3e6b6b7220fd3ca9fe8e16e303b2e6aeded02cce00ed
 
 build:
-  number: 1001
+  number: 0
   skip: True  # [win]
 
 requirements:
