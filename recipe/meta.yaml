@@ -19,6 +19,9 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - {{ compiler('fortran') }}
+    - autoconf # [unix]
+    - gnuconfig # [unix]
+    - make # [unix]
   host:
     - pkgconfig
     - readline
