@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # fix stale config.guess/config.sub to enable linux-aarch64 etc.
-cp $BUILD_PREFIX/share/gnuconfig/config.* config/
+cp $BUILD_PREFIX/share/gnuconfig/config.* .
 
 sh ./configure --prefix=$PREFIX --enable-static --enable-gnu-packages
 chmod +x ./CoinUtils/install-sh
