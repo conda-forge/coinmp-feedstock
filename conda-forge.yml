@@ -5,5 +5,5 @@ github:
   branch_name: main
   tooling_branch_name: main
 provider:
-  linux-aarch64: default
+  linux_aarch64: default
   
