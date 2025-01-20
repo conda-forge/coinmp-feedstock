@@ -21,7 +21,7 @@ requirements:
     - {{ compiler('fortran') }}
     - autoconf  # [unix]
     - gnuconfig  # [unix]
-    - make # [unix]
+    - make  # [unix]
   host:
     - pkgconfig
     - readline
