@@ -15,7 +15,8 @@ cp $BUILD_PREFIX/share/gnuconfig/config.* BuildTools
 CXXFLAGS="${CXXFLAGS} -Dregister=''"
 
 
-sh ./configure --prefix=$PREFIX --enable-static --enable-gnu-packages
+sh ./configure --prefix=$PREFIX --enable-static --enable-gnu-packages CXXFLAGS="${CXXFLAGS} -Dregister=''"
+
 chmod +x ./CoinUtils/install-sh
 chmod +x ./Osi/install-sh
 chmod +x ./Clp/install-sh
@@ -24,7 +25,7 @@ chmod +x ./Cbc/install-sh
 chmod +x ./CoinMP/install-sh
 chmod +x ./Data/Sample/install-sh
 
-make CC="${CC}" CXX="${CXX}" CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}"
+make -j ${CPU_COUNT}
 #make test
 make install
 ls -l $PREFIX/bin
