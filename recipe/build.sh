@@ -12,6 +12,8 @@ cp $BUILD_PREFIX/share/gnuconfig/config.* Data/Sample
 cp $BUILD_PREFIX/share/gnuconfig/config.* CoinUtils
 cp $BUILD_PREFIX/share/gnuconfig/config.* BuildTools
 
+CXXFLAGS="${CXXFLAGS} -Dregister=''"
+
 
 sh ./configure --prefix=$PREFIX --enable-static --enable-gnu-packages
 chmod +x ./CoinUtils/install-sh
@@ -22,7 +24,7 @@ chmod +x ./Cbc/install-sh
 chmod +x ./CoinMP/install-sh
 chmod +x ./Data/Sample/install-sh
 
-make
+make CC=${CC} CXX=${CXX} CFLAGS=${CFLAGS} CXXFLAGS=${CXXFLAGS}
 #make test
 make install
 ls -l $PREFIX/bin
