@@ -24,7 +24,7 @@ chmod +x ./Cbc/install-sh
 chmod +x ./CoinMP/install-sh
 chmod +x ./Data/Sample/install-sh
 
-make CC=${CC} CXX=${CXX} CFLAGS=${CFLAGS} CXXFLAGS=${CXXFLAGS}
+make CC="${CC}" CXX="${CXX}" CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}"
 #make test
 make install
 ls -l $PREFIX/bin
