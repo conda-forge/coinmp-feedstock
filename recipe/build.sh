@@ -15,7 +15,7 @@ cp $BUILD_PREFIX/share/gnuconfig/config.* BuildTools
 CXXFLAGS="${CXXFLAGS} -Dregister=''"
 
 
-sh ./configure --prefix=$PREFIX --enable-static --enable-gnu-packages CXXFLAGS="${CXXFLAGS} -std=c++14"
+sh ./configure --prefix=$PREFIX --enable-gnu-packages CXXFLAGS="${CXXFLAGS} -std=c++14"
 
 chmod +x ./CoinUtils/install-sh
 chmod +x ./Osi/install-sh
