@@ -11,7 +11,7 @@ cp $BUILD_PREFIX/share/gnuconfig/config.* CoinMP
 cp $BUILD_PREFIX/share/gnuconfig/config.* Data/Sample
 cp $BUILD_PREFIX/share/gnuconfig/config.* CoinUtils
 cp $BUILD_PREFIX/share/gnuconfig/config.* BuildTools
-
+# see: https://github.com/coin-or/CoinMP/issues/25 for c++14 requirement issue
 sh ./configure --prefix=$PREFIX --enable-gnu-packages CXXFLAGS="${CXXFLAGS} -std=c++14"
 
 chmod +x ./CoinUtils/install-sh
