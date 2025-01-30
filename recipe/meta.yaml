@@ -27,10 +27,6 @@ requirements:
     - readline
     - zlib
     - bzip2
-  run:
-    - readline
-    - zlib
-    - bzip2
 
 test:
   commands:
